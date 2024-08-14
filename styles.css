@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   font-family: "Barlow", sans-serif;
-  /* line-height: 1.6; */
 }
 
 html {
@@ -18,13 +17,19 @@ html {
   color: #38353f;
 }
 
+body {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
 h2 {
   font-size: 34px;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.3em;
   margin: 20px 0;
+  font-size: 18px;
 }
 
 a {
@@ -39,6 +44,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 25px;
+  /* background-color: rgb(248, 250, 251); */
 }
 
 .logo-name {
@@ -56,7 +62,6 @@ a {
 
 .top-container {
   display: flex;
-  flex: none;
   flex-direction: column;
   flex-wrap: nowrap;
   height: min-content;
@@ -83,8 +88,29 @@ a {
   margin: 0 20px 0 0;
 }
 
+.links a:hover {
+  color: rgba(57, 54, 64, 0.8);
+  text-decoration: underline;
+}
+
 .temp {
   width: 100%;
   padding: 25px;
   background-color: #fff;
+}
+
+@media screen and (min-width: 810px) {
+  h2 {
+    font-size: 54px;
+  }
+
+  p {
+    font-size: 21px;
+  }
+
+  .top-container {
+    flex-direction: row;
+    gap: 100px;
+    padding: 50px;
+  }
 }
