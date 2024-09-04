@@ -1,3 +1,10 @@
+:root {
+  --text-color: #38353f;
+  --background-tint: rgb(248, 250, 251);
+  --link-hover-color: rgba(57, 54, 64, 0.8);
+  --project-hover-color: rgb(210, 235, 252);
+}
+
 *,
 *::before,
 *::after {
@@ -14,7 +21,7 @@ html {
   -webkit-text-size-adjust: none; /* for iOS Safari */
   text-size-adjust: none; /* for other mobile browsers */
   /* font-size: 62.5%; (62.5/100) * 16px = 10px */
-  color: #38353f;
+  color: var(--text-color);
 }
 
 body {
@@ -22,11 +29,11 @@ body {
   margin: 0 auto;
 }
 
-h2 {
+h1 {
   font-size: 34px;
 }
 
-p {
+.blurb {
   line-height: 1.3em;
   margin: 20px 0;
   font-size: 18px;
@@ -44,7 +51,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 25px;
-  /* background-color: rgb(248, 250, 251); */
+  /* background-color: var(--background-tint); */
 }
 
 .logo-name {
@@ -70,7 +77,7 @@ a {
   position: relative;
   width: 100%;
   padding: 25px;
-  background-color: rgb(248, 250, 251);
+  background-color: var(--background-tint);
   opacity: 1;
 }
 
@@ -94,7 +101,7 @@ a {
   }
 }
 
-.top-2 h2 {
+.top-2 h1 {
   animation: 1s ease-out 0s 1 fadeInFromBelow;
 }
 
@@ -117,22 +124,73 @@ a {
 }
 
 .links a:hover {
-  color: rgba(57, 54, 64, 0.8);
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
-.temp {
+.content-container {
   width: 100%;
+  margin-top: 25px;
+}
+
+.project-container {
+  margin-top: 25px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: var(--background-tint);
   padding: 25px;
-  background-color: #fff;
+  border-radius: 24px;
+  margin: 0 25px 15px 25px;
+  transition: transform 0.2s;
+  color: white;
+  background-image: url("assets/screenshots/threejs-perspective.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project:hover {
+  transform: scale(1.06);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.content-title {
+  margin-left: 25px;
+}
+
+.project-text {
+  padding: 10px;
+}
+
+.project-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.project-desc {
+  margin: 10px 0;
+}
+
+.project-screenshot-container {
+  height: 100px;
+  margin: 0 auto;
+}
+
+.project-screenshot {
+  height: 100px;
 }
 
 @media screen and (min-width: 810px) {
-  h2 {
+  h1 {
     font-size: 54px;
   }
 
-  p {
+  .blurb {
     font-size: 21px;
   }
 
@@ -151,5 +209,11 @@ a {
 
   .top-2 {
     padding-left: 50px;
+  }
+
+  .project {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
