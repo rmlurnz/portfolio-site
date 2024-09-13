@@ -152,10 +152,20 @@ a {
   margin: 0 25px 15px 25px;
   transition: transform 0.2s;
   color: white;
-  background-image: url("assets/screenshots/threejs-perspective.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#threejs-perspective {
+  background-image: url("assets/screenshots/threejs-perspective.jpg");
+}
+
+#angular-netflix-clone {
+  background-color: #221f1f;
+  background-image: url("assets/images/notflix.png");
+  background-position: 90% 11%;
+  background-size: 100px;
 }
 
 .project:hover {
@@ -171,6 +181,14 @@ a {
   padding: 10px;
 }
 
+.emphasize {
+  text-decoration: underline;
+  text-decoration-color: #db0000;
+  text-decoration-thickness: 3px;
+  font-style: italic;
+  color: white;
+}
+
 .project-desc {
   margin: 10px 0;
   line-height: 1.3em;
@@ -179,6 +197,7 @@ a {
 
 .project-details {
   font-size: 14px;
+  padding-left: 20px;
 }
 
 .project-screenshot-container {
@@ -220,6 +239,11 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  #angular-netflix-clone {
+    background-position: 97% 15%;
+    background-size: 140px;
   }
 
   .project-desc {
